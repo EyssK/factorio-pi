@@ -6,7 +6,7 @@ COPY --from=arm --chown=root:root /usr/bin/qemu-x86_64-static /usr/bin/
 
 # Install necessary dependencies
 RUN apt update \
-    && apt install wget xz-utils jq -y
+    && apt install wget xz-utils jq adduser -y
 
 # Create user to run server as
 RUN adduser factorio
